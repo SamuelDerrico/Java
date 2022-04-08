@@ -1,0 +1,16 @@
+package aps_poo;
+/*
+*@author Samuel Derrico - samuelderricosabreu@gmail.com;
+*/
+public class EstoqueBateria extends Estoque{
+    String PartNumber;
+    
+    void VendaProduto(int Qtde){
+        if(QtdeModelo<Qtde)
+            System.out.println("Quantidade insulficiente");
+        
+        else
+            QtdeModelo-=Qtde;
+        }
+    
+}

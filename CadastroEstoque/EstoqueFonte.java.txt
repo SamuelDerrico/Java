@@ -1,0 +1,17 @@
+package aps_poo;
+/*
+*@author Samuel Derrico - samuelderricosabreu@gmail.com;
+*/
+public class EstoqueFonte extends Estoque{
+    double Voltagem, Amperagem;
+    String Plug;
+
+    void VendaProduto(int Qtde){
+        if(QtdeModelo<Qtde)
+            System.out.println("Quantidade insulficiente");
+        
+        else
+            QtdeModelo-=Qtde;       
+    }
+    
+}

@@ -1,0 +1,116 @@
+package exemplodeclasses;
+
+import java.util.Scanner;
+
+public class DigitaConta {
+    public static void main(String[] args) {
+        int escolha, escolha2;
+                
+        Scanner tc = new Scanner(System.in);         
+        ContaPoupanca cp = new ContaPoupanca();
+        ContaCorrente cc = new ContaCorrente();
+        
+       do{
+           System.out.println("Bem-vindo ao cadastro de contas!");
+           System.out.println("MENU:");
+           System.out.println("Escolha qual tipo de conta deseja cadastrar:");
+           System.out.println("Digite 1 para cadastrar uma Conta Corrente.");
+           System.out.println("Digite 2 para cadastrar uma Conta Poupança.");
+           System.out.println("Digite 0 caso deseja encerrar o programa.");
+           System.out.print("Opção selecionada: ");
+           escolha=tc.nextInt();           
+            
+            switch(escolha){
+                case 1:
+                    System.out.println("\nCadastro de Conta Corrente.");
+                    System.out.print("\nDigite o número da conta: ");
+                    cc.numeroConta=tc.nextInt();
+
+                        if(cc.numeroConta==0){
+                            break;  
+                        }
+
+                        System.out.print("Digite o número do cliente: ");
+                        cc.numeroCliente=tc.nextInt();
+                        System.out.print("Digite a data de abertura da conta: ");
+                        cc.dataAbertura=tc.next();
+                        System.out.println("Escolha qual operação deseja realizar:");
+                        System.out.println("Digite 1 para realizar um saque.");
+                        System.out.println("Digite 2 para realizar um depósito ");
+                        System.out.println("Digite 3 para exibir seu saldo na Conta Corrente.");
+                        escolha2=tc.nextInt();
+                        System.out.println("Opção " + escolha2 + " selecionada.");
+                        
+                        if(escolha2==1){
+                        System.out.print("\nDigite o valor do saque: ");
+                        cc.saqueConta (tc.nextDouble());
+                        System.out.println("\nO saldo da Conta Corrente é: " + cc.saldo);
+                        }
+                        
+                        if(escolha2==2){
+                        System.out.print("\nDigite o valor do depósito: ");
+                        cc.depositoConta(tc.nextDouble());
+                        System.out.println("\nO saldo da Conta Corrente é: " + cc.saldo + "\n");
+                        }
+                        
+                        if(escolha2==3){
+                            System.out.println("O saldo de sua Conta Corrente é: " + cc.saldo + "\n");
+                        }
+                        main(args);
+                        break;
+                                                 
+                   case 2:
+
+                        System.out.println("Cadastro de Conta Poupança: ");
+                        System.out.print("\nDigite o número da conta: ");
+                        cp.numeroConta=tc.nextInt();
+
+                            if(cp.numeroConta==0){
+                                   break; 
+                            }
+
+                        System.out.print("Digite o número do cliente: ");    
+                        cp.numeroCliente=tc.nextInt();
+                        System.out.print("Digite a data de abertura da conta: ");
+                        cp.dataAniversario=tc.next();  
+                        System.out.println("Escolha qual operação deseja realizar:");
+                        System.out.println("Digite 1 para realizar um saque.");
+                        System.out.println("Digite 2 para realizar um depósito ");
+                        System.out.println("Digite 3 para exibir seu saldo na Conta Poupança.");
+                        escolha2=tc.nextInt();
+                        System.out.println("Opção " + escolha2 + " selecionada.");
+                        
+                        if(escolha2==1){
+                        System.out.print("\nDigite o valor do saque: ");
+                        cp.saqueConta (tc.nextDouble());
+                        System.out.println("\nO saldo da Conta Poupança é: " + cp.saldo);
+                        }
+                        
+                        if(escolha==2){
+                        System.out.print("\nDigite o valor do depósito: ");
+                        cp.depositoConta(tc.nextDouble());
+                        System.out.println("\nO saldo da Conta Poupança é: " + cp.saldo);
+                        }
+                        
+                        if(escolha==3){
+                            System.out.println("O saldo da sua Conta Poupança é: " + cp.saldo + "\n");
+                        }
+                        main(args);
+                        break;                     
+                    
+                   case 0:
+                        System.out.println("Programa finalizado.");  
+                        break;
+                        }                    
+
+                        if(escolha>2){
+                             System.out.println("\nERRO! OPÇÃO INVÁLIDA!!!");
+                             System.out.println("Por favor, selecione uma nova opção.\n");
+                                 main(args);                      
+                                } 
+                                break;
+                                
+        }while (cp.numeroConta!=0 & cc.numeroConta!=0);   
+            
+    }
+}

@@ -1,0 +1,23 @@
+package exemplodeclasses;
+
+
+public class Conta {
+    int numeroConta;
+    int numeroCliente;
+    double saldo;
+    String dataAbertura;
+    
+    void saqueConta(double valor){
+        saldo-=valor;
+        System.out.println("Saque realizado.");
+    }
+    void depositoConta(double valor){
+        saldo+=valor;
+           System.out.println("Depósito realizado.");
+    }      
+    
+   Conta(){
+       saldo=100;
+      dataAbertura="01/01/2000";
+   }
+}

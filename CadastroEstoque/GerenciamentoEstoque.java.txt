@@ -1,0 +1,109 @@
+package aps_poo;
+/*
+*@author Samuel Derrico - samuelderricosabreu@gmail.com;
+*/
+import java.util.Scanner;
+
+public class GerenciamentoEstoque {
+
+    public static void main(String[] args) {
+        Scanner tc = new Scanner(System.in);
+        EstoqueFonte ef = new EstoqueFonte();
+        EstoqueBateria eb = new EstoqueBateria();
+        
+        int choose, choose2, choose3;
+        
+        System.out.println("Bem-vindo ao gerenciamento de estoque.");
+        System.out.println("Digite 1 para cadastrar um produto ao estoque.");
+        System.out.println("Digite 2 para vender um produto do estoque."); 
+        System.out.println("Para encerrar o programa, digite 0.");
+        System.out.print("Opção selecionada: ");
+        choose=tc.nextInt();
+        
+        switch(choose){
+            case 1:
+                System.out.println("Para cadastrar uma fonte, digite 1. ");
+                System.out.println("Para cadastrar uma bateria, digite 2.");
+                System.out.println("Para sair do programa digite 0.");
+                System.out.print("Opção selecionada: ");
+                choose2=tc.nextInt();
+                
+                if(choose2==1){
+                    System.out.print("Digite a marca da fonte que você deseja cadastrar ao estoque: ");
+                    ef.MarcaProduto=tc.next();
+                    System.out.print("Digite o modelo da fonte que você deseja cadastrar ao estoque: ");
+                    ef.ModeloProduto=tc.next();
+                    System.out.print("Digite a PK do produto:");
+                    ef.CodProduto=tc.next();
+                    System.out.print("Digite a Voltagem da fonte: ");
+                    ef.Voltagem=tc.nextDouble();
+                    System.out.print("Digite a Amperagem da fonte: ");
+                    ef.Amperagem=tc.nextDouble();
+                    System.out.print("Digite o tipo do Plug: ");
+                    ef.Plug=tc.next();
+                    System.out.print("Digite a quantidade que deseja acrescentar ao estoque: ");
+                    ef.CompraProduto(tc.nextInt());
+                    System.out.print("Digite a data da compra do produto: ");
+                    ef.DataCompra=tc.next();
+                    System.out.println("Produto cadastrado com sucesso!");                                        
+                }
+                
+                if(choose2==2){
+                    System.out.print("Digite a marca da bateria que você deseja cadastrar ao estoque: ");
+                    eb.MarcaProduto=tc.next();
+                    System.out.print("Digite o modelo da bateria que você deseja cadastrar ao estoque: ");
+                    eb.ModeloProduto=tc.next();
+                    System.out.print("Digite a PK do produto:");
+                    eb.CodProduto=tc.next();
+                    System.out.println("Digite o Part Number da bateria: ");
+                    eb.PartNumber=tc.next();
+                    System.out.print("Digite a quantidade que deseja acrescentar ao estoque: ");
+                    eb.CompraProduto(tc.nextInt());
+                    System.out.print("Digite a data da compra do produto: ");
+                    eb.DataCompra=tc.next();
+                    System.out.println("Produto cadastrado com sucesso!");
+                }
+                
+                if(choose2==0){
+                    System.out.println("Você encerrou o programa.");
+                    break;
+                }
+                
+                main(args);
+                break;
+        
+            case 2:
+                System.out.println("Se deseja vender fontes, digite 1.");
+                System.out.println("Se deseja vender baterias, digite 2.");
+                System.out.println("Se deseja sair, digite 0.");
+                choose3=tc.nextInt();                
+                
+                if(choose3==1){
+                    System.out.print("Digite a PK da fonte que deseja vender: ");
+                    ef.CodProduto=tc.next();
+                    System.out.print("Digite a quantidade que deseja vender:");
+                    ef.VendaProduto(tc.nextInt());
+                    System.out.println("Restaram " + ef.QtdeModelo);
+                    main(args);
+                }
+                
+                if(choose3==2){
+                    System.out.print("Digite a PK da fonte que deseja vender: ");
+                    eb.CodProduto=tc.next();
+                    System.out.print("Digite a quantidade que deseja vender:");
+                    eb.VendaProduto(tc.nextInt());
+                    System.out.println("Restaram " + eb.QtdeModelo);
+                    main(args);
+                }
+                
+                if(choose3==0){
+                    System.out.println("Você encerrou o programa!");
+                    break;
+                }
+                
+            case 0:
+                System.out.println("Você encerrou o programa!");
+                break;
+            }    
+    } 
+}

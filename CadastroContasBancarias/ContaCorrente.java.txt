@@ -1,0 +1,8 @@
+package exemplodeclasses;
+
+
+public class ContaCorrente extends Conta { //herança
+    double limite;
+    int gerente;
+    double taxaMensal;
+}

@@ -1,0 +1,23 @@
+package aps_poo; //super class
+/*
+*@author Samuel Derrico - samuelderricosabreu@gmail.com;
+*/
+public class Estoque {
+    String MarcaProduto, ModeloProduto, CodProduto, DataCompra, DataVenda;
+    int QtdeModelo;
+    
+    void CompraProduto(int Qtde){
+        QtdeModelo+=Qtde;
+        System.out.println("Agora você " + QtdeModelo + " do " + ModeloProduto + " da marca " + MarcaProduto + " ao estoque.");
+    }
+    
+    void VendaProduto(int Qtde){
+        QtdeModelo-=Qtde;
+        System.out.println("Restaram " + QtdeModelo + " no estoque.");
+        
+            
+    }
+    Estoque(){
+        QtdeModelo=1;
+    }
+}

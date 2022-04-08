@@ -1,0 +1,20 @@
+package exemplodeclasses;
+
+public class ContaPoupanca extends Conta {
+    
+    String dataAniversario;
+    
+    //reescrita de método
+    void saqueConta (double valor){
+        
+        if((saldo - valor) < 0)
+            System.out.println("Saldo insulficiente.");
+             
+        else
+            saldo=saldo-valor;           
+          
+    }
+    ContaPoupanca(){
+        saldo=100;
+    }
+}
