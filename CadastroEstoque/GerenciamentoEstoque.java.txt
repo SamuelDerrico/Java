@@ -42,7 +42,7 @@ public class GerenciamentoEstoque {
                     System.out.print("Digite o tipo do Plug: ");
                     ef.plug=tc.next();
                     System.out.print("Digite a quantidade que deseja acrescentar ao estoque: ");
-                    ef.compraProduto(tc.nextInt());
+                    ef.CompraProduto(tc.nextInt());
                     System.out.print("Digite a data da compra do produto: ");
                     ef.dataCompra=tc.next();
                     System.out.println("Produto cadastrado com sucesso!");                                        
@@ -58,7 +58,7 @@ public class GerenciamentoEstoque {
                     System.out.println("Digite o Part Number da bateria: ");
                     eb.partNumber=tc.next();
                     System.out.print("Digite a quantidade que deseja acrescentar ao estoque: ");
-                    eb.compraProduto(tc.nextInt());
+                    eb.CompraProduto(tc.nextInt());
                     System.out.print("Digite a data da compra do produto: ");
                     eb.dataCompra=tc.next();
                     System.out.println("Produto cadastrado com sucesso!");
@@ -82,7 +82,7 @@ public class GerenciamentoEstoque {
                     System.out.print("Digite a PK da fonte que deseja vender: ");
                     ef.codProduto=tc.next();
                     System.out.print("Digite a quantidade que deseja vender:");
-                    ef.vendaProduto(tc.nextInt());
+                    ef.VendaProduto(tc.nextInt());
                     System.out.println("Restaram " + ef.qtdeModelo);
                     main(args);
                 }
@@ -91,7 +91,7 @@ public class GerenciamentoEstoque {
                     System.out.print("Digite a PK da fonte que deseja vender: ");
                     eb.CodProduto=tc.next();
                     System.out.print("Digite a quantidade que deseja vender:");
-                    eb.vendaProduto(tc.nextInt());
+                    eb.VendaProduto(tc.nextInt());
                     System.out.println("Restaram " + eb.qtdeModelo);
                     main(args);
                 }
