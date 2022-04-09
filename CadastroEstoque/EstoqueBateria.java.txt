@@ -3,14 +3,14 @@ package aps_poo;
 *@author Samuel Derrico - samuelderricosabreu@gmail.com;
 */
 public class EstoqueBateria extends Estoque{
-    String PartNumber;
+    String partNumber;
     
-    void VendaProduto(int Qtde){
-        if(QtdeModelo<Qtde)
+    void VendaProduto(int qtde){
+        if(qtdeModelo<qtde)
             System.out.println("Quantidade insulficiente");
         
         else
-            QtdeModelo-=Qtde;
+            qtdeModelo-=qtde;
         }
     
 }

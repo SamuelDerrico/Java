@@ -30,37 +30,37 @@ public class GerenciamentoEstoque {
                 
                 if(choose2==1){
                     System.out.print("Digite a marca da fonte que você deseja cadastrar ao estoque: ");
-                    ef.MarcaProduto=tc.next();
+                    ef.marcaProduto=tc.next();
                     System.out.print("Digite o modelo da fonte que você deseja cadastrar ao estoque: ");
-                    ef.ModeloProduto=tc.next();
+                    ef.modeloProduto=tc.next();
                     System.out.print("Digite a PK do produto:");
-                    ef.CodProduto=tc.next();
+                    ef.codProduto=tc.next();
                     System.out.print("Digite a Voltagem da fonte: ");
-                    ef.Voltagem=tc.nextDouble();
+                    ef.voltagem=tc.nextDouble();
                     System.out.print("Digite a Amperagem da fonte: ");
-                    ef.Amperagem=tc.nextDouble();
+                    ef.amperagem=tc.nextDouble();
                     System.out.print("Digite o tipo do Plug: ");
-                    ef.Plug=tc.next();
+                    ef.plug=tc.next();
                     System.out.print("Digite a quantidade que deseja acrescentar ao estoque: ");
-                    ef.CompraProduto(tc.nextInt());
+                    ef.compraProduto(tc.nextInt());
                     System.out.print("Digite a data da compra do produto: ");
-                    ef.DataCompra=tc.next();
+                    ef.dataCompra=tc.next();
                     System.out.println("Produto cadastrado com sucesso!");                                        
                 }
                 
                 if(choose2==2){
                     System.out.print("Digite a marca da bateria que você deseja cadastrar ao estoque: ");
-                    eb.MarcaProduto=tc.next();
+                    eb.marcaProduto=tc.next();
                     System.out.print("Digite o modelo da bateria que você deseja cadastrar ao estoque: ");
-                    eb.ModeloProduto=tc.next();
+                    eb.modeloProduto=tc.next();
                     System.out.print("Digite a PK do produto:");
-                    eb.CodProduto=tc.next();
+                    eb.codProduto=tc.next();
                     System.out.println("Digite o Part Number da bateria: ");
-                    eb.PartNumber=tc.next();
+                    eb.partNumber=tc.next();
                     System.out.print("Digite a quantidade que deseja acrescentar ao estoque: ");
-                    eb.CompraProduto(tc.nextInt());
+                    eb.compraProduto(tc.nextInt());
                     System.out.print("Digite a data da compra do produto: ");
-                    eb.DataCompra=tc.next();
+                    eb.dataCompra=tc.next();
                     System.out.println("Produto cadastrado com sucesso!");
                 }
                 
@@ -80,10 +80,10 @@ public class GerenciamentoEstoque {
                 
                 if(choose3==1){
                     System.out.print("Digite a PK da fonte que deseja vender: ");
-                    ef.CodProduto=tc.next();
+                    ef.codProduto=tc.next();
                     System.out.print("Digite a quantidade que deseja vender:");
-                    ef.VendaProduto(tc.nextInt());
-                    System.out.println("Restaram " + ef.QtdeModelo);
+                    ef.vendaProduto(tc.nextInt());
+                    System.out.println("Restaram " + ef.qtdeModelo);
                     main(args);
                 }
                 
@@ -91,8 +91,8 @@ public class GerenciamentoEstoque {
                     System.out.print("Digite a PK da fonte que deseja vender: ");
                     eb.CodProduto=tc.next();
                     System.out.print("Digite a quantidade que deseja vender:");
-                    eb.VendaProduto(tc.nextInt());
-                    System.out.println("Restaram " + eb.QtdeModelo);
+                    eb.vendaProduto(tc.nextInt());
+                    System.out.println("Restaram " + eb.qtdeModelo);
                     main(args);
                 }
                 

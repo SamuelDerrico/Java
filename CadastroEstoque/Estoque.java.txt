@@ -3,21 +3,21 @@ package aps_poo; //super class
 *@author Samuel Derrico - samuelderricosabreu@gmail.com;
 */
 public class Estoque {
-    String MarcaProduto, ModeloProduto, CodProduto, DataCompra, DataVenda;
-    int QtdeModelo;
+    String marcaProduto, modeloProduto, codProduto, dataCompra, dataVenda;
+    int qtdeModelo;
     
-    void CompraProduto(int Qtde){
-        QtdeModelo+=Qtde;
-        System.out.println("Agora você " + QtdeModelo + " do " + ModeloProduto + " da marca " + MarcaProduto + " ao estoque.");
+    void CompraProduto(int qtde){
+        qtdeModelo+=qtde;
+        System.out.println("Agora você " + qtdeModelo + " do " + modeloProduto + " da marca " + marcaProduto + " ao estoque.");
     }
     
-    void VendaProduto(int Qtde){
-        QtdeModelo-=Qtde;
-        System.out.println("Restaram " + QtdeModelo + " no estoque.");
+    void VendaProduto(int qtde){
+        qtdeModelo-=qtde;
+        System.out.println("Restaram " + qtdeModelo + " no estoque.");
         
             
     }
     Estoque(){
-        QtdeModelo=1;
+        qtdeModelo=1;
     }
 }

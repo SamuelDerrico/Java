@@ -3,15 +3,15 @@ package aps_poo;
 *@author Samuel Derrico - samuelderricosabreu@gmail.com;
 */
 public class EstoqueFonte extends Estoque{
-    double Voltagem, Amperagem;
-    String Plug;
+    double voltagem, amperagem;
+    String plug;
 
-    void VendaProduto(int Qtde){
-        if(QtdeModelo<Qtde)
+    void VendaProduto(int qtde){
+        if(qtdeModelo<qtde)
             System.out.println("Quantidade insulficiente");
         
         else
-            QtdeModelo-=Qtde;       
+            qtdeModelo-=qtde;       
     }
     
 }
